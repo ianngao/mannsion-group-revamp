@@ -1,0 +1,1202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Mannsion Group: Experts in Late-Stage Investments USA</title>
+  <link rel="icon" type="image/png" href="favicon.png" />
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=Outfit:wght@300;400;500;600&display=swap" rel="stylesheet"/>
+  <style>
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+    :root {
+      --gold: #C9A84C;
+      --gold-light: #E2C47A;
+      --gold-pale: #F5E9C8;
+      --gold-dark: #9A7530;
+      --cream: #FAF7F2;
+      --warm-white: #FFFDF9;
+      --charcoal: #1C1A17;
+      --slate: #3D3A34;
+      --muted: #7A756C;
+      --border: rgba(201,168,76,0.2);
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      font-family: 'Outfit', sans-serif;
+      background: var(--warm-white);
+      color: var(--charcoal);
+      overflow-x: hidden;
+    }
+
+    /* ── NAV ── */
+    nav {
+      position: fixed; top: 0; left: 0; right: 0; z-index: 100;
+      display: flex; align-items: center; justify-content: space-between;
+      padding: 0 5%;
+      height: 72px;
+      background: rgba(255,253,249,0.92);
+      backdrop-filter: blur(12px);
+      border-bottom: 1px solid var(--border);
+      transition: box-shadow 0.3s;
+    }
+    nav.scrolled { box-shadow: 0 2px 24px rgba(0,0,0,0.06); }
+
+    .nav-logo {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+    }
+    .nav-logo-img {
+      height: 40px;
+      width: auto;
+      display: block;
+    }
+
+    .nav-links { display: flex; gap: 2.4rem; list-style: none; }
+    .nav-links a {
+      text-decoration: none;
+      font-size: 0.82rem;
+      font-weight: 500;
+      letter-spacing: 0.12em;
+      text-transform: uppercase;
+      color: var(--slate);
+      transition: color 0.2s;
+    }
+    .nav-links a:hover { color: var(--gold); }
+    .nav-links a.active { color: var(--gold); }
+
+    .nav-cta {
+      background: var(--gold);
+      color: var(--charcoal) !important;
+      padding: 0.55rem 1.4rem;
+      border-radius: 2px;
+    }
+    .nav-cta:hover { background: var(--gold-dark); color: #fff !important; }
+
+    /* ── HERO ── */
+    .hero {
+      min-height: 100vh;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      padding-top: 72px;
+    }
+
+    .hero-left {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      padding: 7% 6% 7% 8%;
+      background: var(--warm-white);
+    }
+
+    .hero-eyebrow {
+      font-size: 0.72rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--gold);
+      font-weight: 600;
+      margin-bottom: 1.6rem;
+      display: flex; align-items: center; gap: 0.8rem;
+    }
+    .hero-eyebrow::before {
+      content: '';
+      display: block; width: 32px; height: 1px;
+      background: var(--gold);
+    }
+
+    .hero-headline {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2.8rem, 4.5vw, 4.2rem);
+      font-weight: 300;
+      line-height: 1.12;
+      color: var(--charcoal);
+      margin-bottom: 1.8rem;
+    }
+    .hero-headline em {
+      font-style: italic;
+      color: var(--gold);
+    }
+
+    .hero-sub {
+      font-size: 1.02rem;
+      line-height: 1.72;
+      color: var(--muted);
+      font-weight: 300;
+      max-width: 440px;
+      margin-bottom: 2.8rem;
+    }
+
+    .hero-actions { display: flex; gap: 1rem; flex-wrap: wrap; }
+
+    .btn-primary {
+      display: inline-flex; align-items: center; gap: 0.6rem;
+      background: var(--gold);
+      color: var(--charcoal);
+      text-decoration: none;
+      font-size: 0.82rem;
+      font-weight: 600;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 0.9rem 2rem;
+      border-radius: 2px;
+      transition: background 0.2s, transform 0.2s;
+      border: none; cursor: pointer;
+    }
+    .btn-primary:hover { background: var(--gold-dark); color: #fff; transform: translateY(-1px); }
+
+    .btn-outline {
+      display: inline-flex; align-items: center; gap: 0.6rem;
+      border: 1px solid var(--gold);
+      color: var(--gold);
+      text-decoration: none;
+      font-size: 0.82rem;
+      font-weight: 500;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      padding: 0.9rem 2rem;
+      border-radius: 2px;
+      transition: all 0.2s;
+    }
+    .btn-outline:hover { background: var(--gold-pale); }
+
+    .hero-stats {
+      margin-top: 4rem;
+      display: flex; gap: 3rem;
+      padding-top: 2.5rem;
+      border-top: 1px solid var(--border);
+    }
+    .stat-val {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 2.2rem;
+      font-weight: 500;
+      color: var(--charcoal);
+      line-height: 1;
+    }
+    .stat-val span { color: var(--gold); }
+    .stat-label {
+      font-size: 0.72rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-top: 0.35rem;
+    }
+
+    .hero-right {
+      position: relative;
+      overflow: hidden;
+      min-height: 480px;
+    }
+    .hero-right img {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 30%;
+      display: block;
+    }
+    .hero-right::after {
+      content: '';
+      position: absolute; inset: 0;
+      background: linear-gradient(135deg, rgba(201,168,76,0.15) 0%, transparent 60%);
+    }
+    .hero-badge {
+      position: absolute; bottom: 2.5rem; left: 2.5rem; z-index: 2;
+      background: rgba(255,253,249,0.95);
+      backdrop-filter: blur(8px);
+      border: 1px solid var(--border);
+      border-left: 3px solid var(--gold);
+      padding: 1rem 1.4rem;
+      border-radius: 2px;
+      max-width: 240px;
+      animation: fadeUp 0.8s 0.4s both;
+    }
+    .hero-badge-title {
+      font-size: 0.7rem; letter-spacing: 0.12em; text-transform: uppercase;
+      color: var(--gold); font-weight: 600; margin-bottom: 0.3rem;
+    }
+    .hero-badge-text {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1rem; color: var(--charcoal); line-height: 1.4;
+    }
+
+    @keyframes fadeUp {
+      from { opacity: 0; transform: translateY(16px); }
+      to   { opacity: 1; transform: translateY(0); }
+    }
+
+    /* ── SECTIONS ── */
+    section {
+      padding: 6rem clamp(1.5rem, 3%, 4rem);
+      max-width: 100%;
+    }
+
+    .section-eyebrow {
+      font-size: 0.72rem; letter-spacing: 0.22em; text-transform: uppercase;
+      color: var(--gold); font-weight: 600;
+      display: flex; align-items: center; gap: 0.8rem;
+      margin-bottom: 1rem;
+    }
+    .section-eyebrow::before {
+      content: ''; display: block; width: 28px; height: 1px; background: var(--gold);
+    }
+
+    .section-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(2rem, 3vw, 2.9rem);
+      font-weight: 300;
+      line-height: 1.18;
+      color: var(--charcoal);
+      max-width: 600px;
+    }
+    .section-title em { font-style: italic; color: var(--gold); }
+
+    .gold-divider {
+      display: block; width: 48px; height: 2px;
+      background: linear-gradient(90deg, var(--gold), var(--gold-light));
+      margin: 1.4rem 0 2rem;
+    }
+
+    /* ── INVESTMENTS ── */
+    .investments-section {
+      background: var(--cream);
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+    .investments-content {
+      max-width: 720px;
+      margin-top: 2rem;
+    }
+    .investments-content p {
+      font-size: 1rem;
+      line-height: 1.78;
+      color: var(--muted);
+      font-weight: 300;
+      margin-bottom: 1.25rem;
+    }
+    .investments-content p:last-child { margin-bottom: 0; }
+
+    /* ── ABOUT ── */
+    #about {
+      min-height: 100vh;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+    }
+
+    .about-inner {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 6rem;
+      align-items: center;
+    }
+
+    .about-img-stack { position: relative; height: 520px; max-width: 100%; }
+    .about-img-stack img:first-child {
+      position: absolute;
+      width: 80%; height: 80%;
+      object-fit: cover;
+      object-position: center 25%;
+      top: 0; left: 0;
+      border-radius: 2px;
+      box-shadow: 0 16px 48px rgba(0,0,0,0.12);
+    }
+    .about-img-stack img:nth-child(2) {
+      position: absolute;
+      width: 55%; height: 50%;
+      object-fit: cover;
+      object-position: top center;
+      bottom: 0; right: 0;
+      border-radius: 2px;
+      box-shadow: 0 8px 32px rgba(0,0,0,0.1);
+      border: 4px solid var(--warm-white);
+    }
+    .about-img-badge {
+      position: absolute;
+      bottom: 25%;
+      left: 55%;
+      z-index: 2;
+      background: var(--gold);
+      color: var(--charcoal);
+      padding: 0.9rem 1.4rem;
+      border-radius: 2px;
+      font-size: 0.75rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      font-weight: 600;
+      line-height: 1.5;
+    }
+
+    .about-content p {
+      font-size: 0.97rem;
+      line-height: 1.82;
+      color: var(--muted);
+      font-weight: 300;
+      margin-bottom: 1.4rem;
+    }
+
+    .about-pillars {
+      display: grid; grid-template-columns: 1fr 1fr;
+      gap: 1.2rem;
+      margin-top: 2rem;
+    }
+    .pillar {
+      background: var(--cream);
+      border: 1px solid var(--border);
+      border-radius: 2px;
+      padding: 1.2rem;
+    }
+    .pillar-title {
+      font-size: 0.78rem;
+      letter-spacing: 0.1em;
+      text-transform: uppercase;
+      color: var(--gold);
+      font-weight: 600;
+      margin-bottom: 0.4rem;
+    }
+    .pillar-desc {
+      font-size: 0.84rem;
+      line-height: 1.6;
+      color: var(--slate);
+    }
+
+    .about-stats {
+      margin-top: 3rem;
+      padding: 1.25rem 1rem;
+      background: var(--cream);
+      border: 1px solid var(--border);
+      border-radius: 2px;
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      gap: 1rem 0.5rem;
+      align-items: center;
+      justify-items: center;
+      max-width: 100%;
+    }
+    .about-stat-item {
+      text-align: center;
+      color: var(--charcoal);
+      min-width: 0;
+    }
+    .about-stat-val {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: clamp(1.35rem, 3vw, 2rem);
+      font-weight: 400;
+      color: var(--gold-dark);
+      line-height: 1.2;
+    }
+    .about-stat-lbl {
+      font-size: clamp(0.6rem, 1.2vw, 0.7rem);
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--muted);
+      margin-top: 0.2rem;
+      line-height: 1.3;
+    }
+
+    /* ── INVESTORS ── */
+    .investors-section {
+      background: var(--charcoal);
+      color: var(--cream);
+      max-width: 100%;
+      overflow-x: hidden;
+      min-height: 100vh;
+    }
+    .investors-section .section-title { color: var(--cream); max-width: 700px; }
+
+    .investors-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 1.5rem;
+      margin-top: 4rem;
+      max-width: 100%;
+    }
+
+    .investor-card {
+      background: rgba(255,255,255,0.05);
+      border: 1px solid rgba(201,168,76,0.2);
+      border-radius: 2px;
+      padding: 2rem 1.6rem;
+      transition: background 0.3s, border-color 0.3s;
+      min-width: 0;
+    }
+    .investor-card:hover {
+      background: rgba(201,168,76,0.08);
+      border-color: var(--gold);
+    }
+    .investor-icon { font-size: 2rem; margin-bottom: 1rem; }
+    .investor-title {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.15rem; font-weight: 500;
+      color: var(--gold-light);
+      margin-bottom: 0.6rem;
+    }
+    .investor-desc {
+      font-size: 0.84rem;
+      line-height: 1.7;
+      color: rgba(250,247,242,0.6);
+      font-weight: 300;
+      overflow-wrap: break-word;
+    }
+
+    .trusted-brands-bar {
+      margin-top: 3rem;
+      padding: 2rem 0;
+      border-top: 1px solid rgba(201,168,76,0.2);
+      border-bottom: 1px solid rgba(201,168,76,0.2);
+      max-width: 100%;
+    }
+    .trusted-brands-bar .trusted-brands-label {
+      font-size: 0.7rem;
+      letter-spacing: 0.14em;
+      text-transform: uppercase;
+      color: var(--gold);
+      font-weight: 600;
+      margin-bottom: 1.25rem;
+      text-align: center;
+    }
+    .trusted-brands-list {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: center;
+      gap: 1.5rem 2.5rem;
+      max-width: 100%;
+      padding: 0 0.5rem;
+    }
+    .trusted-brand-item {
+      display: inline-block;
+      font-size: 0.95rem;
+      font-weight: 500;
+      color: rgba(250,247,242,0.9);
+      letter-spacing: 0.02em;
+    }
+    .trusted-brand-item:not(:last-child)::after {
+      content: ' · ';
+      color: rgba(201,168,76,0.55);
+      font-weight: 300;
+    }
+    .investments-section .trusted-brands-bar .trusted-brands-label { color: var(--gold); }
+    .investments-section .trusted-brand-item { color: var(--charcoal); }
+    .investments-section .trusted-brand-item:not(:last-child)::after { color: rgba(44,42,39,0.5); }
+
+    /* ── TEAM ── */
+    .team-section { background: var(--cream); }
+
+    .team-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 2rem;
+      margin-top: 4rem;
+    }
+
+    .team-card {
+      background: var(--warm-white);
+      border-radius: 2px;
+      overflow: hidden;
+      border: 1px solid var(--border);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+    .team-card:hover {
+      transform: translateY(-6px);
+      box-shadow: 0 16px 48px rgba(0,0,0,0.08);
+    }
+    .team-photo {
+      width: 280px;
+      height: 280px;
+      margin: 0 auto;
+      overflow: hidden;
+      position: relative;
+      background: var(--cream);
+      border-radius: 2px;
+    }
+    .team-photo img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center 20%;
+      transition: transform 0.5s ease;
+      display: block;
+    }
+    .team-card:hover .team-photo img { transform: scale(1.03); }
+    .team-photo-placeholder {
+      width: 100%;
+      height: 100%;
+      min-height: 280px;
+      background: linear-gradient(160deg, var(--gold-pale) 0%, var(--cream) 100%);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.75rem;
+      font-weight: 500;
+      color: var(--gold-dark);
+      letter-spacing: 0.02em;
+    }
+    .team-info { padding: 1.6rem; }
+    .team-role {
+      font-size: 0.68rem; letter-spacing: 0.14em;
+      text-transform: uppercase; color: var(--gold);
+      font-weight: 600; margin-bottom: 0.4rem;
+    }
+    .team-name {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.3rem; font-weight: 500;
+      color: var(--charcoal); margin-bottom: 0.8rem;
+    }
+    .team-bio {
+      font-size: 0.82rem; line-height: 1.72;
+      color: var(--muted); font-weight: 300;
+    }
+
+    /* ── CONTACT ── */
+    .contact-section {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      padding: 0;
+      min-height: 100vh;
+      align-items: stretch;
+    }
+    .contact-left {
+      padding: 6rem 8%;
+      background: var(--charcoal);
+      color: var(--cream);
+    }
+    .contact-left .section-title { color: var(--cream); max-width: 400px; }
+    .contact-right { padding: 6rem 8%; }
+
+    .contact-details { margin-top: 3rem; display: flex; flex-direction: column; gap: 1.5rem; }
+    .contact-item { display: flex; align-items: flex-start; gap: 1rem; }
+    .contact-item-icon {
+      width: 36px; height: 36px;
+      background: rgba(201,168,76,0.15);
+      border: 1px solid rgba(201,168,76,0.3);
+      border-radius: 50%;
+      display: flex; align-items: center; justify-content: center;
+      flex-shrink: 0; font-size: 0.9rem;
+    }
+    .contact-item-text { font-size: 0.88rem; line-height: 1.6; color: rgba(250,247,242,0.7); }
+    .contact-item-label { font-size: 0.68rem; letter-spacing: 0.12em; text-transform: uppercase; color: var(--gold); font-weight: 600; margin-bottom: 0.2rem; }
+
+    .form-field { margin-bottom: 1.4rem; }
+    .form-field label {
+      display: block;
+      font-size: 0.72rem; letter-spacing: 0.1em; text-transform: uppercase;
+      color: var(--slate); font-weight: 600; margin-bottom: 0.5rem;
+    }
+    .form-field input,
+    .form-field textarea,
+    .form-field select {
+      width: 100%;
+      padding: 0.8rem 1rem;
+      background: var(--cream);
+      border: 1px solid var(--border);
+      border-radius: 2px;
+      font-family: 'Outfit', sans-serif;
+      font-size: 0.9rem;
+      color: var(--charcoal);
+      transition: border-color 0.2s;
+      outline: none;
+      appearance: none;
+    }
+    .form-field input:focus,
+    .form-field textarea:focus,
+    .form-field select:focus { border-color: var(--gold); background: #fff; }
+    .form-field textarea { height: 120px; resize: vertical; }
+    .form-row { display: grid; grid-template-columns: 1fr 1fr; gap: 1rem; }
+
+    .form-submit {
+      width: 100%;
+      background: var(--gold);
+      color: var(--charcoal);
+      border: none; cursor: pointer;
+      font-family: 'Outfit', sans-serif;
+      font-size: 0.82rem; font-weight: 600;
+      letter-spacing: 0.12em; text-transform: uppercase;
+      padding: 1rem;
+      border-radius: 2px;
+      transition: background 0.2s, transform 0.2s;
+      margin-top: 0.5rem;
+    }
+    .form-submit:hover { background: var(--gold-dark); color: #fff; transform: translateY(-1px); }
+
+    /* ── DISCLAIMER ── */
+    #disclaimer {
+      background: var(--cream);
+      padding: 4rem 8% 5rem;
+    }
+    .disclaimer-inner {
+      max-width: 720px;
+      margin: 0 auto;
+    }
+    #disclaimer .section-eyebrow { color: var(--gold); }
+    #disclaimer .section-title { color: var(--charcoal); margin-bottom: 0.5rem; }
+    .disclaimer-intro {
+      font-size: 1rem;
+      line-height: 1.78;
+      color: var(--muted);
+      font-weight: 300;
+      margin: 1.5rem 0 2.5rem;
+    }
+    .disclaimer-block { margin-bottom: 2rem; }
+    .disclaimer-block:last-of-type { margin-bottom: 0; }
+    .disclaimer-heading {
+      font-family: 'Outfit', sans-serif;
+      font-size: 0.95rem;
+      font-weight: 600;
+      color: var(--charcoal);
+      margin-bottom: 0.5rem;
+      letter-spacing: 0.01em;
+    }
+    .disclaimer-block p {
+      font-size: 0.9rem;
+      line-height: 1.75;
+      color: var(--muted);
+      font-weight: 300;
+    }
+    .disclaimer-footer-info {
+      margin-top: 3rem;
+      padding-top: 2rem;
+      border-top: 1px solid var(--border);
+      font-size: 0.9rem;
+      color: var(--muted);
+      line-height: 1.8;
+    }
+    .disclaimer-footer-info a { color: var(--gold); text-decoration: none; }
+    .disclaimer-footer-info a:hover { text-decoration: underline; }
+
+    /* ── FOOTER ── */
+    footer {
+      background: #131210;
+      color: rgba(250,247,242,0.5);
+      padding: 2.5rem 8%;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      flex-wrap: wrap;
+      gap: 1.5rem;
+      font-size: 0.78rem;
+    }
+    .footer-logo {
+      display: flex;
+      align-items: center;
+      text-decoration: none;
+    }
+    .footer-logo-img {
+      height: 36px;
+      width: auto;
+      display: block;
+    }
+    .footer-links { display: flex; gap: 2rem; flex-wrap: wrap; }
+    .footer-links a { color: rgba(250,247,242,0.45); text-decoration: none; transition: color 0.2s; font-size: 0.75rem; letter-spacing: 0.08em; }
+    .footer-links a:hover { color: var(--gold); }
+    .footer-disclaimer {
+      width: 100%;
+      padding-top: 1.5rem;
+      border-top: 1px solid rgba(255,255,255,0.05);
+      font-size: 0.7rem;
+      line-height: 1.7;
+      color: rgba(250,247,242,0.3);
+    }
+
+    /* ── FADE IN ── */
+    .fade-in {
+      opacity: 0; transform: translateY(24px);
+      transition: opacity 0.7s ease, transform 0.7s ease;
+    }
+    .fade-in.visible { opacity: 1; transform: translateY(0); }
+
+    /* ── RESPONSIVE ── */
+    @media (max-width: 960px) {
+      .hero { grid-template-columns: 1fr; min-height: auto; }
+      .hero-left { padding: 4rem 5% 3rem; }
+      .hero-right {
+        position: relative;
+        height: 55vh;
+        min-height: 320px;
+        max-height: 420px;
+      }
+      .hero-right img { position: absolute; }
+      .about-inner { grid-template-columns: 1fr; gap: 3rem; }
+      .about-img-stack { height: 340px; margin-bottom: 0; }
+      .investors-grid { grid-template-columns: 1fr 1fr; }
+      .team-grid { grid-template-columns: 1fr 1fr; }
+      .contact-section { grid-template-columns: 1fr; }
+      .contact-left, .contact-right { padding: 4rem 5%; }
+      section { padding: 4rem clamp(1.5rem, 4%, 4rem); }
+      .form-row { grid-template-columns: 1fr; }
+      .trusted-brands-list { gap: 1rem 1.5rem; }
+      .about-stats {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 1rem 0.5rem;
+        padding: 1rem;
+      }
+    }
+    @media (max-width: 580px) {
+      .investors-grid { grid-template-columns: 1fr; }
+      .team-grid { grid-template-columns: 1fr; }
+      .about-pillars { grid-template-columns: 1fr; }
+      .hero-stats { flex-wrap: wrap; gap: 1.5rem; }
+      .hero-headline { font-size: clamp(2rem, 8vw, 2.8rem); }
+      .nav-links { display: none; }
+      .about-stats {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.75rem 0.5rem;
+        padding: 0.875rem 0.75rem;
+      }
+      .about-stat-val { font-size: 1.25rem; }
+      .about-stat-lbl { font-size: 0.58rem; letter-spacing: 0.06em; }
+      .trusted-brands-bar { margin-top: 2rem; padding: 1.5rem 0; }
+      .trusted-brand-item { font-size: 0.85rem; }
+      footer { flex-direction: column; text-align: center; align-items: center; }
+      .footer-links { justify-content: center; }
+    }
+  </style>
+</head>
+<body>
+
+<!-- NAV -->
+<nav id="nav">
+  <a href="#" class="nav-logo"><img src="images/logo.png" alt="Mannsion Group" class="nav-logo-img" /></a>
+  <ul class="nav-links">
+    <li><a href="#about">About</a></li>
+    <li><a href="#investments">Investments</a></li>
+    <li><a href="#investors">Investors</a></li>
+    <li><a href="#team">Team</a></li>
+    <li><a href="#disclaimer">Disclaimer</a></li>
+    <li><a href="#contact" class="nav-cta">Contact us</a></li>
+  </ul>
+</nav>
+
+<!-- HERO -->
+<div class="hero">
+  <div class="hero-left">
+    <div class="hero-eyebrow">Investing in Late-Stage Private Companies</div>
+    <h1 class="hero-headline">
+      Mannsion Group
+    </h1>
+    <p class="hero-sub">
+      Investing our own capital with Family Offices and UHNW investors in the most attractive growth and late-stage private companies.
+    </p>
+    <div class="hero-actions">
+      <a href="#investors" class="btn-primary">What We Do</a>
+      <a href="#team" class="btn-outline">Meet the Team</a>
+    </div>
+    <div class="hero-stats">
+      <div>
+        <div class="stat-val">$3<span>B+</span></div>
+        <div class="stat-label">Transactions Facilitated</div>
+      </div>
+      <div>
+        <div class="stat-val">25<span>+</span></div>
+        <div class="stat-label">Years Experience</div>
+      </div>
+      <div>
+        <div class="stat-val">100<span>+</span></div>
+        <div class="stat-label">Closed Investments</div>
+      </div>
+    </div>
+  </div>
+  <div class="hero-right">
+    <img
+      src="images/hero-meeting.png"
+      alt="Professional business meeting — handshake symbolizing partnership and successful deal"
+    />
+    <div class="hero-badge">
+      <div class="hero-badge-title">Exclusive Access</div>
+      <div class="hero-badge-text">Late-stage &amp; pre-IPO private companies</div>
+    </div>
+  </div>
+</div>
+
+<!-- INVESTMENTS -->
+<section class="investments-section" id="investments">
+  <div class="section-eyebrow">Investments</div>
+  <h2 class="section-title">Invest with <em>Confidence</em></h2>
+  <span class="gold-divider"></span>
+  <div class="investments-content">
+    <p>We are like-minded, long-term investors interested in companies with recognized value creation.</p>
+    <p>Mannsion Group's expertise is built on the experience of both working with companies directly on their capital structure and establishing private markets businesses in three different top tier firms over the last 15 years — giving us unparalleled knowledge of how to work with Family Offices and UHNW clients.</p>
+    <p>Based on this experience, Mannsion Group has differentiated access to growth and late-stage private companies through a network of relationships with company founders, C-suite executives and cap table institutional investors.</p>
+  </div>
+  <div class="trusted-brands-bar">
+    <div class="trusted-brands-label">Trusted brands</div>
+    <div class="trusted-brands-list">
+      <span class="trusted-brand-item">OpenAI</span>
+      <span class="trusted-brand-item">Anthropic</span>
+      <span class="trusted-brand-item">Colossal</span>
+      <span class="trusted-brand-item">Anduril</span>
+      <span class="trusted-brand-item">Figure</span>
+      <span class="trusted-brand-item">Shield AI</span>
+      <span class="trusted-brand-item">SpaceX</span>
+    </div>
+  </div>
+</section>
+
+<!-- ABOUT -->
+<section id="about">
+  <div class="about-inner">
+    <div class="about-img-stack fade-in">
+      <img
+        src="images/about-skyscrapers.png"
+        alt="Modern city skyscrapers and sky — growth and scale"
+      />
+      <img
+        src="images/about-finance-overlay.png"
+        alt="Financial data and market analysis"
+      />
+      <div class="about-img-badge">15+ Years<br>Private Markets</div>
+    </div>
+    <div class="about-content fade-in">
+      <div class="section-eyebrow">Our Expertise</div>
+      <h2 class="section-title">About Us</h2>
+      <span class="gold-divider"></span>
+      <p>
+        Mannsion Group's expertise is built on 15 years of working directly with companies 
+        on their capital structure and establishing private markets businesses at three 
+        top-tier firms — giving us unparalleled knowledge of how to work with Family Offices 
+        and UHNW clients.
+      </p>
+      <p>
+        We are like-minded, long-term investors focused on companies with recognized 
+        value creation. We don't replace financial advisors — we partner with Wealth Managers, 
+        Private Banks, Multi-Family Offices, and RIAs to deliver differentiated access.
+      </p>
+      <div class="about-pillars">
+        <div class="pillar">
+          <div class="pillar-title">Primary Offerings</div>
+          <div class="pillar-desc">Direct equity investment in growing private companies.</div>
+        </div>
+        <div class="pillar">
+          <div class="pillar-title">Secondary Market</div>
+          <div class="pillar-desc">Access existing shares from early investors or employees.</div>
+        </div>
+        <div class="pillar">
+          <div class="pillar-title">Tender Offerings</div>
+          <div class="pillar-desc">Company-approved liquidity events at scale.</div>
+        </div>
+        <div class="pillar">
+          <div class="pillar-title">Fund Vehicles</div>
+          <div class="pillar-desc">Diversified and single-asset structures for clean execution.</div>
+        </div>
+      </div>
+      <div class="about-stats">
+        <div class="about-stat-item"><div class="about-stat-val">$3B+</div><div class="about-stat-lbl">Capital Facilitated</div></div>
+        <div class="about-stat-item"><div class="about-stat-val">10,000+</div><div class="about-stat-lbl">Opportunities Vetted</div></div>
+        <div class="about-stat-item"><div class="about-stat-val">100+</div><div class="about-stat-lbl">Closed Investments</div></div>
+        <div class="about-stat-item"><div class="about-stat-val">25+</div><div class="about-stat-lbl">Years on Wall Street</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- INVESTORS -->
+<section class="investors-section" id="investors">
+  <div class="section-eyebrow">Investors</div>
+  <h2 class="section-title">Investor Focus</h2>
+  <span class="gold-divider" style="background:linear-gradient(90deg,var(--gold),var(--gold-light));"></span>
+  <p style="font-size:1rem;line-height:1.78;color:rgba(250,247,242,0.6);max-width:640px;font-weight:300;margin-bottom:0;">
+    We are focused on our market and are not here to replace financial advisors nor to “hold the hat”. We deploy capital in company approved Transactions in Primary, Secondary, and Tender Offerings as a response to identified interest. To adhere to company cap table requirements and to minimize burden to the company we will often create and manage both Diversified Funds of Pre-Identified Names and Single-Asset vehicles.
+  </p>
+  <div class="investors-grid">
+    <div class="investor-card fade-in">
+      <div class="investor-icon">🏛️</div>
+      <div class="investor-title">Family Offices</div>
+      <p class="investor-desc">Single and multi-family offices seeking differentiated private market exposure outside traditional channels.</p>
+    </div>
+    <div class="investor-card fade-in">
+      <div class="investor-icon">👤</div>
+      <div class="investor-title">UHNW Individuals</div>
+      <p class="investor-desc">Ultra-high-net-worth investors seeking exclusive access to late-stage private companies before they go public.</p>
+    </div>
+    <div class="investor-card fade-in">
+      <div class="investor-icon">📈</div>
+      <div class="investor-title">Institutional Investors</div>
+      <p class="investor-desc">Endowments, pensions, and foundations with mandates for alternative and private market allocations.</p>
+    </div>
+    <div class="investor-card fade-in">
+      <div class="investor-icon">🤝</div>
+      <div class="investor-title">Wealth Advisors</div>
+      <p class="investor-desc">Private banks, RIAs, and wealth managers expanding their alternative investment platform for clients.</p>
+    </div>
+  </div>
+</section>
+
+<!-- TEAM -->
+<section class="team-section" id="team">
+  <div class="section-eyebrow">Leadership</div>
+  <h2 class="section-title">The <em>Team</em> Behind the Access</h2>
+  <span class="gold-divider"></span>
+  <div class="team-grid">
+
+    <div class="team-card fade-in">
+      <div class="team-photo">
+        <img src="https://cdn.durable.co/blocks/1alcIe1glpzQcGYjOVvzyOEtRCkC1o9Kr0ipdePii8FiWD5KklZ0PuSGiY56Toni.png" alt="David Mann"
+          onerror="this.parentElement.innerHTML='<div class=team-photo-placeholder>DM</div>'" />
+      </div>
+      <div class="team-info">
+        <div class="team-role">Founder &amp; CEO</div>
+        <div class="team-name">David Mann</div>
+        <p class="team-bio">25+ years on Wall Street. Founded the Private Institutional Client Group at Raymond James and Alex. Brown, facilitating over $3B in private company transactions. Former roles at Deutsche Bank and JPMorgan.</p>
+      </div>
+    </div>
+
+    <div class="team-card fade-in">
+      <div class="team-photo">
+        <img src="https://cdn.durable.co/blocks/1wqQtx7UJ0HV0ymODu3S8aZ9em8CiCcsByOYyrxKL4L5YteJvtu7F5TdGGOMfsKD.jpg" alt="Leonard Cohen"
+          onerror="this.parentElement.innerHTML='<div class=team-photo-placeholder>LC</div>'" />
+      </div>
+      <div class="team-info">
+        <div class="team-role">COO &amp; CFO</div>
+        <div class="team-name">Leonard Cohen</div>
+        <p class="team-bio">Oversees operations, financial management, and regulatory framework. Former COO of the PIC team at Raymond James. Senior roles at Credit Suisse, Barclays, Lehman Brothers, BCG, and PwC Consulting.</p>
+      </div>
+    </div>
+
+    <div class="team-card fade-in">
+      <div class="team-photo">
+        <img src="https://cdn.durable.co/blocks/30gbhXRzrdIB8LgjQ6InSHKt7L1DlSXcEuaAPwVm0jb8Tog675bfPxs53Wh2hDew.jpg" alt="Max Wolff"
+          onerror="this.parentElement.innerHTML='<div class=team-photo-placeholder>MW</div>'" />
+      </div>
+      <div class="team-info">
+        <div class="team-role">Head of Research</div>
+        <div class="team-name">Max Wolff</div>
+        <p class="team-bio">Co-Founder of Systematic Ventures. Former Chief Economist at Manhattan Venture Partners, valuing late-stage companies including LinkedIn, Facebook, Alibaba, and Palantir for institutional investors.</p>
+      </div>
+    </div>
+
+    <div class="team-card fade-in">
+      <div class="team-photo">
+        <img src="https://cdn.durable.co/blocks/32vKxnviwlzqNZxC49pgQIpYBNM0jwRQTYcfAvgA7ubDbsiEpVQmjt1VFdL7ZCQE.jpg" alt="Matthew Shaw"
+          onerror="this.parentElement.innerHTML='<div class=team-photo-placeholder>MS</div>'" />
+      </div>
+      <div class="team-info">
+        <div class="team-role">Associate</div>
+        <div class="team-name">Matthew Shaw</div>
+        <p class="team-bio">Supports origination, investment research, and investor relations. Previously an investment research and fundraising analyst with the PIC Group at Raymond James for three years.</p>
+      </div>
+    </div>
+
+    <div class="team-card fade-in">
+      <div class="team-photo">
+        <img src="https://cdn.durable.co/blocks/20mMlsQBZTd6jjXDwM3LS7V6okwZrKHWqYRf42olTkQg3cmDqlpM3hR7gXc5ZKx1.jpg" alt="Krissy Corcoran"
+          onerror="this.parentElement.innerHTML='<div class=team-photo-placeholder>KC</div>'" />
+      </div>
+      <div class="team-info">
+        <div class="team-role">Operations Manager</div>
+        <div class="team-name">Krissy Corcoran</div>
+        <p class="team-bio">Leads pre- and post-investment workflows and investor onboarding. Six years at Raymond James' PIC Group managing Datasite, conference leadership, and account setup.</p>
+      </div>
+    </div>
+
+    <div class="team-card fade-in">
+      <div class="team-photo">
+        <img src="https://cdn.durable.co/blocks/acju0bk8WM1PHrCVhmVgTMHIUPJKE5xjkMCw2dqIBSspzXaE8UF92Pp94tTzR7Xa.png" alt="Ivor Wolk"
+          onerror="this.parentElement.innerHTML='<div class=team-photo-placeholder>IW</div>'" />
+      </div>
+      <div class="team-info">
+        <div class="team-role">Outside General Counsel</div>
+        <div class="team-name">Ivor Wolk</div>
+        <p class="team-bio">Partner at Manatt, Phelps &amp; Phillips. Expertise in investment advisory and broker-dealer compliance. Former General Counsel at Yieldstreet, guiding financing rounds and M&A transactions.</p>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- CONTACT -->
+<div class="contact-section" id="contact">
+  <div class="contact-left">
+    <div class="section-eyebrow">Get in Touch</div>
+    <h2 class="section-title">Reach Out to <em>Mannsion Group</em></h2>
+    <span class="gold-divider"></span>
+    <p style="font-size:0.95rem;line-height:1.78;color:rgba(250,247,242,0.6);font-weight:300;max-width:360px;">
+      Whether you are an investor seeking private market access or a company looking for capital, 
+      we welcome the conversation.
+    </p>
+    <div class="contact-details">
+      <div class="contact-item">
+        <div class="contact-item-icon">📍</div>
+        <div class="contact-item-text">
+          <div class="contact-item-label">Location</div>
+          New York, NY
+        </div>
+      </div>
+      <div class="contact-item">
+        <div class="contact-item-icon">✉️</div>
+        <div class="contact-item-text">
+          <div class="contact-item-label">Email</div>
+          info@mannsiongroup.com
+        </div>
+      </div>
+      <div class="contact-item">
+        <div class="contact-item-icon">🔒</div>
+        <div class="contact-item-text">
+          <div class="contact-item-label">Investor Type</div>
+          Accredited &amp; Institutional Investors Only
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="contact-right">
+    <div class="section-eyebrow">Send a Message</div>
+    <h3 style="font-family:'Cormorant Garamond',serif;font-size:1.8rem;font-weight:400;color:var(--charcoal);margin-bottom:2rem;">We'd love to hear from you</h3>
+    <div class="form-row">
+      <div class="form-field">
+        <label>First Name</label>
+        <input type="text" placeholder="John" />
+      </div>
+      <div class="form-field">
+        <label>Last Name</label>
+        <input type="text" placeholder="Smith" />
+      </div>
+    </div>
+    <div class="form-field">
+      <label>Email Address</label>
+      <input type="email" placeholder="john@family-office.com" />
+    </div>
+    <div class="form-field">
+      <label>Investor Type</label>
+      <select>
+        <option value="">Select your investor type</option>
+        <option>Family Office</option>
+        <option>UHNW Individual</option>
+        <option>Institutional Investor</option>
+        <option>Wealth Manager / RIA</option>
+        <option>Private Bank</option>
+        <option>Other</option>
+      </select>
+    </div>
+    <div class="form-field">
+      <label>Message</label>
+      <textarea placeholder="Tell us about your investment interests or questions..."></textarea>
+    </div>
+    <button class="form-submit">Send Message →</button>
+  </div>
+</div>
+
+<!-- DISCLAIMER -->
+<section id="disclaimer">
+  <div class="disclaimer-inner">
+    
+    <h2 class="section-title">Legal Notice and Disclaimers</h2>
+    <span class="gold-divider"></span>
+    <p class="disclaimer-intro">
+      The following Legal Notice and Disclaimers apply to persons who access the materials made available at the website (“Website”) maintained by The Mannsion Group LLC (“Mannsion Group” or the “Company”). All use of the Website is subject to the Terms of Use that follow.
+    </p>
+    <div class="disclaimer-block">
+      <h3 class="disclaimer-heading">No Recommendation.</h3>
+      <p>The information contained on this website is provided by Mannsion Group for general informational purposes only. Nothing herein should be construed as an offer to sell, a solicitation to buy, or a recommendation for any security or investment strategy. Any such offer or solicitation will be made only through formal offering documents and in compliance with applicable securities laws. Certain companies mentioned on this website are ones in which the Firm may have invested, may currently invest, or may have evaluated in the past. The inclusion of any company does not constitute a recommendation or endorsement.</p>
+    </div>
+    <div class="disclaimer-block">
+      <h3 class="disclaimer-heading">No Advice.</h3>
+      <p>The materials on this website are not intended to provide, and should not be relied upon for, investment, accounting, legal, or tax advice. Users should consult their own professional advisers regarding any investment decision.</p>
+    </div>
+    <div class="disclaimer-block">
+      <h3 class="disclaimer-heading">No Guarantees.</h3>
+      <p>Any descriptions involving investment process, models, statistical analysis, investment strategies, and styles are provided for illustration purposes only, may not be indicative of future investments, and are not intended to reflect actual performance or to project performance. Investments for a Fund are selected by and will vary in the sole discretion of the Company and are subject to availability and market conditions, among other things. No representation is made that Company’s risk management, investment process or investment objectives will or are likely to be achieved or successful or that a Fund or any of its investments will make any profit or will not sustain losses.</p>
+    </div>
+    <div class="disclaimer-block">
+      <h3 class="disclaimer-heading">Performance.</h3>
+      <p>PAST PERFORMANCE IS NOT INDICATIVE OF FUTURE RESULTS. No representation is made any underlying investment will make any profit or will not sustain losses, including the full loss of investor principal.</p>
+    </div>
+    <div class="disclaimer-block">
+      <h3 class="disclaimer-heading">Forward-Looking Statements.</h3>
+      <p>Any assumptions, assessments, intended targets, statements or the like (collectively, “Statements”) regarding future events or which are forward-looking constitute only subjective views, outlooks, estimations or intentions, are based upon the Advisers’ expectations, intentions or beliefs, should not be relied on, are subject to change due to a variety of factors, including fluctuating market conditions and economic factors, and involve inherent risks and uncertainties, both general and specific, many of which cannot be predicted or quantified and are beyond the Company’s control. Future evidence and actual results (including actual composition and investment characteristics of a Fund’s portfolio) could differ materially from those set forth in, contemplated by, or underlying these Statements. In light of these risks and uncertainties, there can be no assurance and no representation is given that these Statements are now or will prove to be accurate or complete in any way. The Company undertake no responsibility or obligation to revise or update such Statements.</p>
+    </div>
+    <div class="disclaimer-block">
+      <h3 class="disclaimer-heading">Descriptions of Process.</h3>
+      <p>Any descriptions or information involving investment objectives or criteria, investment process, or investment strategies are provided for illustration purposes only and may not be fully indicative of any present or future investments, may be changed in the discretion of the advisers or their affiliates and are not intended to reflect actual performance or to project performance.</p>
+    </div>
+    <div class="disclaimer-block">
+      <h3 class="disclaimer-heading">For the Public.</h3>
+      <p>By accessing this website, you acknowledge and agree that you are responsible for compliance with all applicable laws and regulations in your jurisdiction and that you use this website at your own risk. The Firm shall not be liable for any direct, indirect, or consequential losses arising from the use of or reliance upon any information contained herein.</p>
+    </div>
+    <div class="disclaimer-footer-info">
+      <strong>The Mannsion Group LLC</strong><br>
+      New York, NY<br>
+      <a href="mailto:ir.sx@mannsiongroup.com">ir.sx@mannsiongroup.com</a><br>
+      <a href="https://www.linkedin.com/company/mannsion-group" target="_blank" rel="noopener noreferrer">Find Us on LinkedIn</a>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <a href="#" class="footer-logo"><img src="images/logo.png" alt="Mannsion Group" class="footer-logo-img" /></a>
+  <div class="footer-links">
+    <a href="#about">About</a>
+    <a href="#investments">Investments</a>
+    <a href="#investors">Investors</a>
+    <a href="#team">Team</a>
+    <a href="#">Home</a>
+    <a href="#disclaimer">Disclaimer</a>
+    <a href="#contact">Contact</a>
+  </div>
+  <div>© 2025 Mannsion Group. All rights reserved.</div>
+  <div class="footer-disclaimer">
+    This website is for informational purposes only and does not constitute an offer to sell or solicitation of an offer to buy any securities. 
+    Investments in private companies involve significant risk, including loss of principal. 
+    Mannsion Group works exclusively with accredited investors as defined by applicable securities laws. 
+    Past performance is not indicative of future results.
+  </div>
+</footer>
+
+<script>
+  // Scrolling nav shadow
+  const nav = document.getElementById('nav');
+  window.addEventListener('scroll', () => {
+    nav.classList.toggle('scrolled', window.scrollY > 20);
+  });
+
+  // Update URL hash and nav active state to match section in view
+  const sections = document.querySelectorAll('section[id], .contact-section[id]');
+  const navLinks = document.querySelectorAll('.nav-links a[href^="#"]');
+  function updateHashAndNav() {
+    const scrollY = window.scrollY;
+    let current = null;
+    sections.forEach(section => {
+      const top = section.offsetTop - 100;
+      const height = section.offsetHeight;
+      if (scrollY >= top && scrollY < top + height) current = section.id;
+    });
+    if (current) {
+      if (current !== window.location.hash.slice(1)) {
+        history.replaceState(null, null, '#' + current);
+      }
+      navLinks.forEach(link => {
+        const href = link.getAttribute('href');
+        link.classList.toggle('active', href === '#' + current && !link.classList.contains('nav-cta'));
+      });
+    } else {
+      navLinks.forEach(link => link.classList.remove('active'));
+    }
+  }
+  window.addEventListener('scroll', updateHashAndNav, { passive: true });
+  window.addEventListener('load', updateHashAndNav);
+
+  // Fade-in observer
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(e => {
+      if (e.isIntersecting) {
+        e.target.classList.add('visible');
+      }
+    });
+  }, { threshold: 0.1 });
+
+  document.querySelectorAll('.fade-in').forEach((el, i) => {
+    // Stagger sibling cards
+    const parent = el.parentElement;
+    const siblings = [...parent.children].filter(c => c.classList.contains('fade-in'));
+    const idx = siblings.indexOf(el);
+    if (idx > 0) el.style.transitionDelay = `${idx * 0.1}s`;
+    observer.observe(el);
+  });
+</script>
+</body>
+</html>

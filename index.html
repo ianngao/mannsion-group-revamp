@@ -240,12 +240,25 @@
 
     /* ── INVESTMENTS ── */
     .investments-section {
-      background: var(--cream);
+      position: relative;
       min-height: 100vh;
       display: flex;
       flex-direction: column;
       justify-content: center;
       align-items: center;
+      background: var(--cream) url('images/investments-bg.png') center / cover no-repeat;
+    }
+    .investments-section::before {
+      content: '';
+      position: absolute;
+      inset: 0;
+      background: rgba(253, 251, 247, 0.82);
+      pointer-events: none;
+    }
+    .investments-section .investments-inner,
+    .investments-section .trusted-brands-bar {
+      position: relative;
+      z-index: 1;
     }
     .investments-inner {
       width: 100%;

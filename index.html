@@ -485,16 +485,35 @@
     }
     .trusted-brand-logo {
       flex-shrink: 0;
-      height: 32px;
-      width: auto;
-      max-width: 120px;
+      height: 36px;
+      width: 36px;
       object-fit: contain;
-      filter: brightness(0) invert(1);
-      opacity: 0.85;
+      opacity: 0.9;
     }
     .investments-section .trusted-brand-logo {
       filter: brightness(0) saturate(100%);
-      opacity: 0.7;
+      opacity: 0.75;
+    }
+    .trusted-brand-slot {
+      flex-shrink: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 36px;
+      height: 36px;
+    }
+    .trusted-brand-slot .trusted-brand-fallback {
+      display: none;
+      font-size: 0.75rem;
+      font-weight: 600;
+      letter-spacing: 0.04em;
+      color: var(--charcoal);
+    }
+    .trusted-brand-slot .trusted-brand-fallback.show {
+      display: inline-block;
+    }
+    .investments-section .trusted-brand-slot .trusted-brand-fallback {
+      color: var(--slate);
     }
     .trusted-brands-list {
       display: flex;
@@ -891,21 +910,21 @@
     <div class="trusted-brands-label">Companies we work with</div>
     <div class="trusted-brands-marquee">
       <div class="trusted-brands-track">
-        <img class="trusted-brand-logo" src="https://logo.clearbit.com/openai.com" alt="OpenAI" loading="lazy" />
-        <img class="trusted-brand-logo" src="https://logo.clearbit.com/anthropic.com" alt="Anthropic" loading="lazy" />
-        <img class="trusted-brand-logo" src="https://logo.clearbit.com/colossal.com" alt="Colossal" loading="lazy" />
-        <img class="trusted-brand-logo" src="https://logo.clearbit.com/anduril.com" alt="Anduril" loading="lazy" />
-        <img class="trusted-brand-logo" src="https://logo.clearbit.com/figure.ai" alt="Figure" loading="lazy" />
-        <img class="trusted-brand-logo" src="https://logo.clearbit.com/shield.ai" alt="Shield AI" loading="lazy" />
-        <img class="trusted-brand-logo" src="https://logo.clearbit.com/spacex.com" alt="SpaceX" loading="lazy" />
+        <div class="trusted-brand-slot"><img class="trusted-brand-logo" src="https://cdn.simpleicons.org/openai/2d2d2d?size=32" alt="OpenAI" loading="lazy" onerror="this.style.display='none';this.nextElementSibling?.classList.add('show')" /><span class="trusted-brand-fallback">OpenAI</span></div>
+        <div class="trusted-brand-slot"><img class="trusted-brand-logo" src="https://cdn.simpleicons.org/anthropic/2d2d2d?size=32" alt="Anthropic" loading="lazy" onerror="this.style.display='none';this.nextElementSibling?.classList.add('show')" /><span class="trusted-brand-fallback">Anthropic</span></div>
+        <div class="trusted-brand-slot"><img class="trusted-brand-logo" src="https://cdn.simpleicons.org/colossal/2d2d2d?size=32" alt="Colossal" loading="lazy" onerror="this.style.display='none';this.nextElementSibling?.classList.add('show')" /><span class="trusted-brand-fallback">Colossal</span></div>
+        <div class="trusted-brand-slot"><img class="trusted-brand-logo" src="https://cdn.simpleicons.org/anduril/2d2d2d?size=32" alt="Anduril" loading="lazy" onerror="this.style.display='none';this.nextElementSibling?.classList.add('show')" /><span class="trusted-brand-fallback">Anduril</span></div>
+        <div class="trusted-brand-slot"><img class="trusted-brand-logo" src="https://cdn.simpleicons.org/figure/2d2d2d?size=32" alt="Figure" loading="lazy" onerror="this.style.display='none';this.nextElementSibling?.classList.add('show')" /><span class="trusted-brand-fallback">Figure</span></div>
+        <div class="trusted-brand-slot"><img class="trusted-brand-logo" src="https://cdn.simpleicons.org/shielddotai/2d2d2d?size=32" alt="Shield AI" loading="lazy" onerror="this.style.display='none';this.nextElementSibling?.classList.add('show')" /><span class="trusted-brand-fallback">Shield AI</span></div>
+        <div class="trusted-brand-slot"><img class="trusted-brand-logo" src="https://cdn.simpleicons.org/spacex/2d2d2d?size=32" alt="SpaceX" loading="lazy" onerror="this.style.display='none';this.nextElementSibling?.classList.add('show')" /><span class="trusted-brand-fallback">SpaceX</span></div>
         <!-- duplicate for seamless loop -->
-        <img class="trusted-brand-logo" src="https://logo.clearbit.com/openai.com" alt="" loading="lazy" aria-hidden="true" />
-        <img class="trusted-brand-logo" src="https://logo.clearbit.com/anthropic.com" alt="" loading="lazy" aria-hidden="true" />
-        <img class="trusted-brand-logo" src="https://logo.clearbit.com/colossal.com" alt="" loading="lazy" aria-hidden="true" />
-        <img class="trusted-brand-logo" src="https://logo.clearbit.com/anduril.com" alt="" loading="lazy" aria-hidden="true" />
-        <img class="trusted-brand-logo" src="https://logo.clearbit.com/figure.ai" alt="" loading="lazy" aria-hidden="true" />
-        <img class="trusted-brand-logo" src="https://logo.clearbit.com/shield.ai" alt="" loading="lazy" aria-hidden="true" />
-        <img class="trusted-brand-logo" src="https://logo.clearbit.com/spacex.com" alt="" loading="lazy" aria-hidden="true" />
+        <div class="trusted-brand-slot"><img class="trusted-brand-logo" src="https://cdn.simpleicons.org/openai/2d2d2d?size=32" alt="" loading="lazy" aria-hidden="true" onerror="this.style.display='none';this.nextElementSibling?.classList.add('show')" /><span class="trusted-brand-fallback" aria-hidden="true">OpenAI</span></div>
+        <div class="trusted-brand-slot"><img class="trusted-brand-logo" src="https://cdn.simpleicons.org/anthropic/2d2d2d?size=32" alt="" loading="lazy" aria-hidden="true" onerror="this.style.display='none';this.nextElementSibling?.classList.add('show')" /><span class="trusted-brand-fallback" aria-hidden="true">Anthropic</span></div>
+        <div class="trusted-brand-slot"><img class="trusted-brand-logo" src="https://cdn.simpleicons.org/colossal/2d2d2d?size=32" alt="" loading="lazy" aria-hidden="true" onerror="this.style.display='none';this.nextElementSibling?.classList.add('show')" /><span class="trusted-brand-fallback" aria-hidden="true">Colossal</span></div>
+        <div class="trusted-brand-slot"><img class="trusted-brand-logo" src="https://cdn.simpleicons.org/anduril/2d2d2d?size=32" alt="" loading="lazy" aria-hidden="true" onerror="this.style.display='none';this.nextElementSibling?.classList.add('show')" /><span class="trusted-brand-fallback" aria-hidden="true">Anduril</span></div>
+        <div class="trusted-brand-slot"><img class="trusted-brand-logo" src="https://cdn.simpleicons.org/figure/2d2d2d?size=32" alt="" loading="lazy" aria-hidden="true" onerror="this.style.display='none';this.nextElementSibling?.classList.add('show')" /><span class="trusted-brand-fallback" aria-hidden="true">Figure</span></div>
+        <div class="trusted-brand-slot"><img class="trusted-brand-logo" src="https://cdn.simpleicons.org/shielddotai/2d2d2d?size=32" alt="" loading="lazy" aria-hidden="true" onerror="this.style.display='none';this.nextElementSibling?.classList.add('show')" /><span class="trusted-brand-fallback" aria-hidden="true">Shield AI</span></div>
+        <div class="trusted-brand-slot"><img class="trusted-brand-logo" src="https://cdn.simpleicons.org/spacex/2d2d2d?size=32" alt="" loading="lazy" aria-hidden="true" onerror="this.style.display='none';this.nextElementSibling?.classList.add('show')" /><span class="trusted-brand-fallback" aria-hidden="true">SpaceX</span></div>
       </div>
     </div>
   </div>

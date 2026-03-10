@@ -501,15 +501,15 @@
       display: flex;
       align-items: center;
       justify-content: center;
-      min-width: 36px;
+      min-width: 5rem;
       height: 36px;
       background: transparent;
     }
     .trusted-brand-slot .trusted-brand-fallback {
-      display: none;
-      font-size: 0.75rem;
+      display: inline-block;
+      font-size: 0.8rem;
       font-weight: 600;
-      letter-spacing: 0.04em;
+      letter-spacing: 0.06em;
       color: var(--charcoal);
     }
     .trusted-brand-slot .trusted-brand-fallback.show {
@@ -913,21 +913,21 @@
     <div class="trusted-brands-label">Companies we work with</div>
     <div class="trusted-brands-marquee">
       <div class="trusted-brands-track">
-        <div class="trusted-brand-slot"><img class="trusted-brand-logo" src="/images/logos/openai.png" alt="OpenAI" loading="lazy" onerror="this.style.display='none';this.nextElementSibling?.classList.add('show')" /><span class="trusted-brand-fallback">OpenAI</span></div>
-        <div class="trusted-brand-slot"><img class="trusted-brand-logo" src="/images/logos/anthropic.png" alt="Anthropic" loading="lazy" onerror="this.style.display='none';this.nextElementSibling?.classList.add('show')" /><span class="trusted-brand-fallback">Anthropic</span></div>
-        <div class="trusted-brand-slot"><img class="trusted-brand-logo" src="/images/logos/colossal.png" alt="Colossal" loading="lazy" onerror="this.style.display='none';this.nextElementSibling?.classList.add('show')" /><span class="trusted-brand-fallback">Colossal</span></div>
-        <div class="trusted-brand-slot"><img class="trusted-brand-logo" src="/images/logos/anduril.png" alt="Anduril" loading="lazy" onerror="this.style.display='none';this.nextElementSibling?.classList.add('show')" /><span class="trusted-brand-fallback">Anduril</span></div>
-        <div class="trusted-brand-slot"><img class="trusted-brand-logo" src="/images/logos/figure.png" alt="Figure" loading="lazy" onerror="this.style.display='none';this.nextElementSibling?.classList.add('show')" /><span class="trusted-brand-fallback">Figure</span></div>
-        <div class="trusted-brand-slot"><img class="trusted-brand-logo" src="/images/logos/shield-ai.png" alt="Shield AI" loading="lazy" onerror="this.style.display='none';this.nextElementSibling?.classList.add('show')" /><span class="trusted-brand-fallback">Shield AI</span></div>
-        <div class="trusted-brand-slot"><img class="trusted-brand-logo" src="/images/logos/spacex.png" alt="SpaceX" loading="lazy" onerror="this.style.display='none';this.nextElementSibling?.classList.add('show')" /><span class="trusted-brand-fallback">SpaceX</span></div>
+        <div class="trusted-brand-slot"><span class="trusted-brand-fallback">OpenAI</span></div>
+        <div class="trusted-brand-slot"><span class="trusted-brand-fallback">Anthropic</span></div>
+        <div class="trusted-brand-slot"><span class="trusted-brand-fallback">Colossal</span></div>
+        <div class="trusted-brand-slot"><span class="trusted-brand-fallback">Anduril</span></div>
+        <div class="trusted-brand-slot"><span class="trusted-brand-fallback">Figure</span></div>
+        <div class="trusted-brand-slot"><span class="trusted-brand-fallback">Shield AI</span></div>
+        <div class="trusted-brand-slot"><span class="trusted-brand-fallback">SpaceX</span></div>
         <!-- duplicate for seamless loop -->
-        <div class="trusted-brand-slot"><img class="trusted-brand-logo" src="/images/logos/openai.png" alt="" loading="lazy" aria-hidden="true" onerror="this.style.display='none';this.nextElementSibling?.classList.add('show')" /><span class="trusted-brand-fallback" aria-hidden="true">OpenAI</span></div>
-        <div class="trusted-brand-slot"><img class="trusted-brand-logo" src="/images/logos/anthropic.png" alt="" loading="lazy" aria-hidden="true" onerror="this.style.display='none';this.nextElementSibling?.classList.add('show')" /><span class="trusted-brand-fallback" aria-hidden="true">Anthropic</span></div>
-        <div class="trusted-brand-slot"><img class="trusted-brand-logo" src="/images/logos/colossal.png" alt="" loading="lazy" aria-hidden="true" onerror="this.style.display='none';this.nextElementSibling?.classList.add('show')" /><span class="trusted-brand-fallback" aria-hidden="true">Colossal</span></div>
-        <div class="trusted-brand-slot"><img class="trusted-brand-logo" src="/images/logos/anduril.png" alt="" loading="lazy" aria-hidden="true" onerror="this.style.display='none';this.nextElementSibling?.classList.add('show')" /><span class="trusted-brand-fallback" aria-hidden="true">Anduril</span></div>
-        <div class="trusted-brand-slot"><img class="trusted-brand-logo" src="/images/logos/figure.png" alt="" loading="lazy" aria-hidden="true" onerror="this.style.display='none';this.nextElementSibling?.classList.add('show')" /><span class="trusted-brand-fallback" aria-hidden="true">Figure</span></div>
-        <div class="trusted-brand-slot"><img class="trusted-brand-logo" src="/images/logos/shield-ai.png" alt="" loading="lazy" aria-hidden="true" onerror="this.style.display='none';this.nextElementSibling?.classList.add('show')" /><span class="trusted-brand-fallback" aria-hidden="true">Shield AI</span></div>
-        <div class="trusted-brand-slot"><img class="trusted-brand-logo" src="/images/logos/spacex.png" alt="" loading="lazy" aria-hidden="true" onerror="this.style.display='none';this.nextElementSibling?.classList.add('show')" /><span class="trusted-brand-fallback" aria-hidden="true">SpaceX</span></div>
+        <div class="trusted-brand-slot"><span class="trusted-brand-fallback" aria-hidden="true">OpenAI</span></div>
+        <div class="trusted-brand-slot"><span class="trusted-brand-fallback" aria-hidden="true">Anthropic</span></div>
+        <div class="trusted-brand-slot"><span class="trusted-brand-fallback" aria-hidden="true">Colossal</span></div>
+        <div class="trusted-brand-slot"><span class="trusted-brand-fallback" aria-hidden="true">Anduril</span></div>
+        <div class="trusted-brand-slot"><span class="trusted-brand-fallback" aria-hidden="true">Figure</span></div>
+        <div class="trusted-brand-slot"><span class="trusted-brand-fallback" aria-hidden="true">Shield AI</span></div>
+        <div class="trusted-brand-slot"><span class="trusted-brand-fallback" aria-hidden="true">SpaceX</span></div>
       </div>
     </div>
   </div>

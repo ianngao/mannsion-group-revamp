@@ -463,6 +463,39 @@
       margin-bottom: 1.25rem;
       text-align: center;
     }
+    .trusted-brands-marquee {
+      overflow: hidden;
+      max-width: 100%;
+      mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
+      -webkit-mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
+    }
+    .trusted-brands-track {
+      display: flex;
+      align-items: center;
+      gap: 3rem;
+      width: max-content;
+      animation: trusted-brands-scroll 35s linear infinite;
+    }
+    .trusted-brands-track:hover {
+      animation-play-state: paused;
+    }
+    @keyframes trusted-brands-scroll {
+      0% { transform: translateX(0); }
+      100% { transform: translateX(-50%); }
+    }
+    .trusted-brand-logo {
+      flex-shrink: 0;
+      height: 32px;
+      width: auto;
+      max-width: 120px;
+      object-fit: contain;
+      filter: brightness(0) invert(1);
+      opacity: 0.85;
+    }
+    .investments-section .trusted-brand-logo {
+      filter: brightness(0) saturate(100%);
+      opacity: 0.7;
+    }
     .trusted-brands-list {
       display: flex;
       flex-wrap: wrap;
@@ -855,15 +888,25 @@
     <p>Based on this experience, Mannsion Group has differentiated access to growth and late-stage private companies through a network of relationships with company founders, C-suite executives and cap table institutional investors.</p>
   </div>
   <div class="trusted-brands-bar">
-    <div class="trusted-brands-label">Trusted brands</div>
-    <div class="trusted-brands-list">
-      <span class="trusted-brand-item">OpenAI</span>
-      <span class="trusted-brand-item">Anthropic</span>
-      <span class="trusted-brand-item">Colossal</span>
-      <span class="trusted-brand-item">Anduril</span>
-      <span class="trusted-brand-item">Figure</span>
-      <span class="trusted-brand-item">Shield AI</span>
-      <span class="trusted-brand-item">SpaceX</span>
+    <div class="trusted-brands-label">Companies we work with</div>
+    <div class="trusted-brands-marquee">
+      <div class="trusted-brands-track">
+        <img class="trusted-brand-logo" src="https://logo.clearbit.com/openai.com" alt="OpenAI" loading="lazy" />
+        <img class="trusted-brand-logo" src="https://logo.clearbit.com/anthropic.com" alt="Anthropic" loading="lazy" />
+        <img class="trusted-brand-logo" src="https://logo.clearbit.com/colossal.com" alt="Colossal" loading="lazy" />
+        <img class="trusted-brand-logo" src="https://logo.clearbit.com/anduril.com" alt="Anduril" loading="lazy" />
+        <img class="trusted-brand-logo" src="https://logo.clearbit.com/figure.ai" alt="Figure" loading="lazy" />
+        <img class="trusted-brand-logo" src="https://logo.clearbit.com/shield.ai" alt="Shield AI" loading="lazy" />
+        <img class="trusted-brand-logo" src="https://logo.clearbit.com/spacex.com" alt="SpaceX" loading="lazy" />
+        <!-- duplicate for seamless loop -->
+        <img class="trusted-brand-logo" src="https://logo.clearbit.com/openai.com" alt="" loading="lazy" aria-hidden="true" />
+        <img class="trusted-brand-logo" src="https://logo.clearbit.com/anthropic.com" alt="" loading="lazy" aria-hidden="true" />
+        <img class="trusted-brand-logo" src="https://logo.clearbit.com/colossal.com" alt="" loading="lazy" aria-hidden="true" />
+        <img class="trusted-brand-logo" src="https://logo.clearbit.com/anduril.com" alt="" loading="lazy" aria-hidden="true" />
+        <img class="trusted-brand-logo" src="https://logo.clearbit.com/figure.ai" alt="" loading="lazy" aria-hidden="true" />
+        <img class="trusted-brand-logo" src="https://logo.clearbit.com/shield.ai" alt="" loading="lazy" aria-hidden="true" />
+        <img class="trusted-brand-logo" src="https://logo.clearbit.com/spacex.com" alt="" loading="lazy" aria-hidden="true" />
+      </div>
     </div>
   </div>
 </section>

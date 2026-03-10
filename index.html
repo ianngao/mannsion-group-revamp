@@ -254,6 +254,18 @@
     }
     .investments-section .section-eyebrow {
       justify-content: center;
+      gap: 1rem;
+    }
+    .investments-section .section-eyebrow::before,
+    .investments-section .section-eyebrow::after {
+      content: '';
+      display: block;
+      width: 32px;
+      height: 1px;
+      background: linear-gradient(90deg, var(--gold), var(--gold-light));
+    }
+    .investments-section .section-eyebrow::after {
+      background: linear-gradient(90deg, var(--gold-light), var(--gold));
     }
     .investments-section .section-title {
       margin-left: auto;

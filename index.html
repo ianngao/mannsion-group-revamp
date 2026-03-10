@@ -491,11 +491,38 @@
     /* ── TEAM ── */
     .team-section { background: var(--cream); }
 
+    .team-subsection {
+      margin-top: 3.5rem;
+    }
+    .team-subsection:first-of-type {
+      margin-top: 4rem;
+    }
+    .team-subsection-title {
+      font-size: 0.72rem;
+      letter-spacing: 0.22em;
+      text-transform: uppercase;
+      color: var(--gold);
+      font-weight: 600;
+      margin-bottom: 1.25rem;
+      display: flex;
+      align-items: center;
+      gap: 0.8rem;
+    }
+    .team-subsection-title::before {
+      content: '';
+      display: block;
+      width: 28px;
+      height: 1px;
+      background: var(--gold);
+    }
+    .team-subsection .team-grid {
+      margin-top: 1.25rem;
+    }
+
     .team-grid {
       display: grid;
       grid-template-columns: repeat(3, 1fr);
       gap: 2rem;
-      margin-top: 4rem;
     }
 
     .team-card {
@@ -932,35 +959,41 @@
 
 <!-- TEAM -->
 <section class="team-section" id="team">
-  <div class="section-eyebrow">Leadership</div>
+  <div class="section-eyebrow">Our People</div>
   <h2 class="section-title">The <em>Team</em> Behind the Access</h2>
   <span class="gold-divider"></span>
-  <div class="team-grid">
 
-    <div class="team-card fade-in">
-      <div class="team-photo">
-        <img src="https://cdn.durable.co/blocks/1alcIe1glpzQcGYjOVvzyOEtRCkC1o9Kr0ipdePii8FiWD5KklZ0PuSGiY56Toni.png" alt="David Mann"
-          onerror="this.parentElement.innerHTML='<div class=team-photo-placeholder>DM</div>'" />
+  <div class="team-subsection">
+    <div class="team-subsection-title">Leadership</div>
+    <div class="team-grid">
+      <div class="team-card fade-in">
+        <div class="team-photo">
+          <img src="https://cdn.durable.co/blocks/1alcIe1glpzQcGYjOVvzyOEtRCkC1o9Kr0ipdePii8FiWD5KklZ0PuSGiY56Toni.png" alt="David Mann"
+            onerror="this.parentElement.innerHTML='<div class=team-photo-placeholder>DM</div>'" />
+        </div>
+        <div class="team-info">
+          <div class="team-role">Founder &amp; CEO</div>
+          <div class="team-name">David Mann</div>
+          <p class="team-bio">25+ years on Wall Street. Founded the Private Institutional Client Group at Raymond James and Alex. Brown, facilitating over $3B in private company transactions. Former roles at Deutsche Bank and JPMorgan.</p>
+        </div>
       </div>
-      <div class="team-info">
-        <div class="team-role">Founder &amp; CEO</div>
-        <div class="team-name">David Mann</div>
-        <p class="team-bio">25+ years on Wall Street. Founded the Private Institutional Client Group at Raymond James and Alex. Brown, facilitating over $3B in private company transactions. Former roles at Deutsche Bank and JPMorgan.</p>
+      <div class="team-card fade-in">
+        <div class="team-photo">
+          <img src="https://cdn.durable.co/blocks/1wqQtx7UJ0HV0ymODu3S8aZ9em8CiCcsByOYyrxKL4L5YteJvtu7F5TdGGOMfsKD.jpg" alt="Leonard Cohen"
+            onerror="this.parentElement.innerHTML='<div class=team-photo-placeholder>LC</div>'" />
+        </div>
+        <div class="team-info">
+          <div class="team-role">COO &amp; CFO</div>
+          <div class="team-name">Leonard Cohen</div>
+          <p class="team-bio">Oversees operations, financial management, and regulatory framework. Former COO of the PIC team at Raymond James. Senior roles at Credit Suisse, Barclays, Lehman Brothers, BCG, and PwC Consulting.</p>
+        </div>
       </div>
     </div>
+  </div>
 
-    <div class="team-card fade-in">
-      <div class="team-photo">
-        <img src="https://cdn.durable.co/blocks/1wqQtx7UJ0HV0ymODu3S8aZ9em8CiCcsByOYyrxKL4L5YteJvtu7F5TdGGOMfsKD.jpg" alt="Leonard Cohen"
-          onerror="this.parentElement.innerHTML='<div class=team-photo-placeholder>LC</div>'" />
-      </div>
-      <div class="team-info">
-        <div class="team-role">COO &amp; CFO</div>
-        <div class="team-name">Leonard Cohen</div>
-        <p class="team-bio">Oversees operations, financial management, and regulatory framework. Former COO of the PIC team at Raymond James. Senior roles at Credit Suisse, Barclays, Lehman Brothers, BCG, and PwC Consulting.</p>
-      </div>
-    </div>
-
+  <div class="team-subsection">
+    <div class="team-subsection-title">Team</div>
+    <div class="team-grid">
     <div class="team-card fade-in">
       <div class="team-photo">
         <img src="https://cdn.durable.co/blocks/30gbhXRzrdIB8LgjQ6InSHKt7L1DlSXcEuaAPwVm0jb8Tog675bfPxs53Wh2hDew.jpg" alt="Max Wolff"
@@ -1009,6 +1042,7 @@
       </div>
     </div>
 
+    </div>
   </div>
 </section>
 

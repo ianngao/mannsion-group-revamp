@@ -162,28 +162,6 @@
     }
     .btn-outline:hover { background: var(--gold-pale); }
 
-    .hero-stats {
-      margin-top: 4rem;
-      display: flex; gap: 3rem;
-      padding-top: 2.5rem;
-      border-top: 1px solid var(--border);
-    }
-    .stat-val {
-      font-family: 'Cormorant Garamond', serif;
-      font-size: 2.2rem;
-      font-weight: 500;
-      color: var(--charcoal);
-      line-height: 1;
-    }
-    .stat-val span { color: var(--gold); }
-    .stat-label {
-      font-size: 0.72rem;
-      letter-spacing: 0.1em;
-      text-transform: uppercase;
-      color: var(--muted);
-      margin-top: 0.35rem;
-    }
-
     .hero-right {
       position: relative;
       overflow: hidden;
@@ -638,6 +616,32 @@
       font-size: 0.82rem; line-height: 1.72;
       color: var(--muted); font-weight: 300;
     }
+    .team-member-stats {
+      display: flex;
+      gap: 1.5rem;
+      margin-top: 1.25rem;
+      padding-top: 1.25rem;
+      border-top: 1px solid var(--border);
+      flex-wrap: wrap;
+    }
+    .team-member-stat {
+      display: flex;
+      flex-direction: column;
+      gap: 0.2rem;
+    }
+    .team-member-stat-val {
+      font-family: 'Cormorant Garamond', serif;
+      font-size: 1.25rem;
+      font-weight: 500;
+      color: var(--gold-dark);
+      line-height: 1;
+    }
+    .team-member-stat-lbl {
+      font-size: 0.62rem;
+      letter-spacing: 0.08em;
+      text-transform: uppercase;
+      color: var(--muted);
+    }
 
     /* ── CONTACT ── */
     .contact-section {
@@ -826,7 +830,6 @@
       .investors-grid { grid-template-columns: 1fr; }
       .team-grid { grid-template-columns: 1fr; }
       .about-pillars { grid-template-columns: 1fr; }
-      .hero-stats { flex-wrap: wrap; gap: 1.5rem; }
       .hero-headline { font-size: clamp(2rem, 8vw, 2.8rem); }
       .nav-links { display: none; }
       .about-stats {
@@ -871,20 +874,6 @@
     <div class="hero-actions">
       <a href="#investors" class="btn-primary">What We Do</a>
       <a href="#team" class="btn-outline">Meet the Team</a>
-    </div>
-    <div class="hero-stats">
-      <div>
-        <div class="stat-val">$3<span>B+</span></div>
-        <div class="stat-label">Transactions Facilitated</div>
-      </div>
-      <div>
-        <div class="stat-val">25<span>+</span></div>
-        <div class="stat-label">Years Experience</div>
-      </div>
-      <div>
-        <div class="stat-val">100<span>+</span></div>
-        <div class="stat-label">Closed Investments</div>
-      </div>
     </div>
   </div>
   <div class="hero-right">
@@ -1040,6 +1029,11 @@
           <div class="team-role">Founder &amp; CEO</div>
           <div class="team-name">David Mann</div>
           <p class="team-bio">25+ years on Wall Street. Founded the Private Institutional Client Group at Raymond James and Alex. Brown, facilitating over $3B in private company transactions. Former roles at Deutsche Bank and JPMorgan.</p>
+          <div class="team-member-stats">
+            <div class="team-member-stat"><span class="team-member-stat-val">$3B+</span><span class="team-member-stat-lbl">Transactions Facilitated</span></div>
+            <div class="team-member-stat"><span class="team-member-stat-val">25+</span><span class="team-member-stat-lbl">Years Experience</span></div>
+            <div class="team-member-stat"><span class="team-member-stat-val">100+</span><span class="team-member-stat-lbl">Closed Investments</span></div>
+          </div>
         </div>
       </div>
       <div class="team-card fade-in">
